@@ -13,14 +13,12 @@ static void Gen_codigo_expresion(Expresion *expr) {
       Gen_codigo_expresion(expr->derecha);
       switch (expr->oper) {
         case '+':
-          //printf("ADD\n");
-          //return Gen_codigo_expresion(expr->izquierda) + Gen_codigo_expresion(expr->derecha);
-          printf("Sum: %d",expr->izquierda + expr -> derecha);
+          printf("ADD\n");
+          printf("%d\n",expr->izquierda->valor + expr->derecha->valor);
           break;
-        case '-':
-          //return Gen_codigo_expresion(expr->izquierda) * Gen_codigo_expresion(expr->derecha);
-          //printf("MULT\n");
-          printf("mul: %d",expr->izquierda * expr -> derecha);
+        case '*':
+          printf("MULT\n");
+          printf("%d\n",expr->izquierda->valor * expr->derecha->valor);
           break;
       }
       break;
